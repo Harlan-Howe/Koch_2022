@@ -133,9 +133,8 @@ public class SnowPanel extends JPanel {
 		{
 			if (shouldInterrupt)  // bail out if we need to cancel and leave.
 				return;
-
-			// TODO: This is just the base case. You need to finish this method.
-				//------------------------------------------------- BASE CASE START
+			if (1 ==1 )// TODO: base case detection - replace this condition with something better.
+			{    //------------------------------------------------- BASE CASE START
 				double nextXLoc = penLocX + length * i[direction];
 				double nextYLoc = penLocY + length * j[direction];
 				synchronized (myCanvasMutex) // wait to get access to myCanvas to draw in it, and lock it.
@@ -148,6 +147,11 @@ public class SnowPanel extends JPanel {
 				setPenLoc(nextXLoc, nextYLoc);
 				repaint();
 				//------------------------------------------------- BASE CASE END
+			}
+			else
+			{
+				// TODO: The recursive part....
+			}
 
 		}
 	}
